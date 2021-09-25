@@ -7,8 +7,7 @@ import socket
 
 import uvloop as uvloop
 
-from server import request, response
-from utils import consts
+from utils import consts, request, response
 
 logger = logging.getLogger('server')
 logger.setLevel(logging.INFO)

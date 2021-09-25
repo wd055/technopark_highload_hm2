@@ -27,4 +27,5 @@ CONTENT_TYPES = {
     '.png': 'image/png',
     '.gif': 'image/gif',
     '.swf': 'application/x-shockwave-flash',
+    '.txt': 'text/htm',
 }

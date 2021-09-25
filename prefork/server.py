@@ -6,8 +6,7 @@ import socket
 
 import uvloop as uvloop
 
-from ..server import request, response
-from utils import config
+from utils import config, request, response
 
 
 async def handle(sock):
@@ -42,9 +41,9 @@ class Server:
         for _ in range(config.CPU_LIMIT):
             pid = os.fork()
             if pid == 0:
-                print(f'New child pid: {pid}')
                 asyncio.run(self.handle_child())
             else:
+                print(f'New child pid: {pid}')
                 self.handle_parent(pid)
 
         for pid in self.process_pull:
